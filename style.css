@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:95%;
+    max-width: 1080px;
+    margin:0 auto;
+}
+
+.logo-container{
+    width:75px;
+}
+
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,100,94,1) 0%, rgba(158,208,196,1) 69%, rgba(168,222,209,1) 89%, rgba(168,222,209,1) 100%);
+}
+
+.logo-container img{
+    width:100%;
+    height:auto;
+}
+
+/* header*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    list-style:none;
+    align-items: center;
+}
+
+.navbar li a {
+    text-decoration: none;
+    display:block;
+    color:black;
+    margin: .25rem .5rem;
+    padding:.2rem .4rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.navbar li a:hover, .navbar li a:focus{
+    color:white;
+    background: black;
+
+}
+
+
+main h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top:2rem;
+}
+
+
+.hero-container{
+    width:80%;
+    margin:0 auto;
+}
+.hero-container img{
+    width:100%;
+    height:auto;
+    border-radius: 10px;
+}
+
+
+.grupos-whats-telegram{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+
+
+}
+.telegram{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    height:fit-content;
+    background:#2FA4D6;
+    border-radius: 50%;  
+    margin-left:.5rem; 
+    border:10px solid white;
+    padding:.5rem; 
+
+}
+.telegram:hover,.whatsapp:hover{
+    transform:scale(1.1);
+}
+.telegram i{
+    font-size:128px;
+    color:white;
+    padding:.5rem .7rem .5rem .5rem;
+    
+
+}
+
+.grupos-whats-telegram a {
+    text-decoration: none;
+    cursor:pointer;
+
+}
+
+.whatsapp{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    height:fit-content;
+    background:#00E676;
+    border-radius: 50%;
+    padding:.75rem;
+
+    
+}
+
+
+.whatsapp i{
+    font-size:128px;
+    color:white;
+    padding:.5rem;
+}
+.grupos{
+    padding: 3em 1em;
+
+}
+.title-grupos{
+    text-align:  center;
+    font-weight: 1.75rem;
+    margin-top: 5rem;
+}
