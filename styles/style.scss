@@ -1,0 +1,313 @@
+@import "colors";
+@import "globals";
+@import "medias";
+
+%grid-2c{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+%grid-3c{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+%flex-jc-sb{
+    display:flex;
+    justify-content: space-between;
+}
+%flex-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+header{
+    background-color: $lighterGreen;
+}
+
+.navbar{
+    @extend %flex-jc-sb;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+
+
+    position:relative;
+    &__logo{
+        @extend %flex-center;
+        &__img{
+            width:78px;
+            height:auto;
+        }
+
+        &__name{
+            font-weight: bold;
+            font-size: 1.2rem;
+            color:$darkBlue;
+
+        }
+    }
+
+    &__container{
+        @extend %flex-center;   
+        
+        .close-btn{
+            transform:scale(0);
+        }
+
+
+        @include tablet{
+            position:fixed;
+            flex-direction: column;
+            background:$lighterGreen;
+            height:120vh;
+            width:80vw;
+            left:100%;
+            top:-1rem;
+            padding:0;
+            margin:0;
+            transition:.5s ease;
+
+            .close-btn{
+                transform:scale(1);
+            }
+
+            li{
+                width:100%;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
+       
+    }
+
+    &__links{
+        display:block;
+        color:$darkGreen;
+        font-weight: bold;
+        margin:0rem .6rem;
+        text-transform: uppercase;
+        transition:color .3s ease;
+
+        &:hover,&:focus{
+            color:$darkBlue;
+        }
+    }
+}
+
+.menu_barras{
+    width:32px;
+    height:32px;
+    @extend %flex-center;
+    flex-direction: column;
+    position:absolute;
+    right:0;
+    top:40px;
+    opacity: 0;
+    transform: scale(0);
+    transition:.5s ease;
+    cursor:pointer;
+
+    
+    @include tablet{
+        opacity:1;
+        transform:scale(1);
+    }
+    &:hover  div{
+        border-color:$darkBlue;
+    }
+    div{
+        width:100%;
+        margin-top:3px;
+        border-bottom: 5px solid $darkGreen;
+        border-radius:2px; 
+    }
+}
+
+.close-btn{
+    position:absolute;
+    top:30px;
+    right:30px;
+    font-size: 2rem;
+    font-weight: bolder;
+    color:$darkGreen;
+    cursor:pointer;
+    &:hover{
+        color:$red;
+    }
+
+}
+.show-side-bar{
+    left: 20%;
+}
+
+/*HERO STYLE*/
+
+.hero{
+    padding: 1rem 0;
+    height:90vh;
+    @extend %flex-center;
+
+    &__title{
+        text-align: center;
+        color:$darkBlue;
+        text-shadow: .5px .5px $darkBlue;
+        font-size:clamp(1.3rem,1.7rem,2rem);
+    }
+}
+
+/*COURSE STYLE*/
+.courses{
+    &__title{
+        text-align: center;
+        color:$darkBlue;
+        text-shadow: .5px .5px $darkBlue;
+        font-size:clamp(1.3rem,1.7rem,2rem);
+        margin-bottom: 1rem;
+    }
+
+    &__container{
+        @extend %grid-3c;
+        place-items: center;
+        grid-row-gap:20px;
+        
+
+        @include large{
+            grid-template-columns: 1fr 1fr;
+    
+        }
+        @include medium{
+            grid-template-columns: 1fr;
+    
+        }
+    }
+}
+.card{
+    width:300px;
+    background-color:lighten($darkBlue,60%);
+    @extend %flex-center;
+    flex-direction: column;
+    padding:15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
+    &__img{
+        width: 250px;
+        height:auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__name{
+        font-weight: bold;
+        color:$darkBlue;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__description{
+        text-align: center;
+        margin-bottom: 10px;
+        color:$darkGreen
+    }
+
+    &__btn{
+        display:block;
+        background-color: $darkGreen;
+        color:$white;
+        padding:.5rem 1.2rem;
+        border-radius: 8px;
+        &:hover{
+            color:$lighterGreen;
+            background-color: $darkBlue;
+        }
+    }
+}
+
+/*GROUPS STYLE*/
+.groups{
+    margin-top:1rem;
+    padding-top:2rem;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,100,94,1) 0%, rgba(158,208,196,1) 69%, rgba(168,222,209,1) 89%, rgba(168,222,209,1) 100%);
+    height:50vh;
+    @extend %flex-center;
+
+    &__title{
+        text-align:  center;
+        font-weight: 1.75rem;
+    }
+
+
+    &__container{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 3rem;
+        padding-top:3rem;
+    
+    }
+    &__whatsapp{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:fit-content;
+        height:fit-content;
+        background:#00E676;
+        border-radius: 50%;
+        padding:.75rem;
+        i{
+            font-size:64px;
+            color:white;
+            padding:.5rem;
+        }
+
+        &:hover{
+            transform:scale(1.1);
+        }
+
+        a {
+            text-decoration: none;
+            cursor:pointer;            
+        }    
+    }
+    
+    &__telegram{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:fit-content;
+        height:fit-content;
+        background:#2FA4D6;
+        border-radius: 50%;  
+        margin-left:.5rem; 
+        border:10px solid white;
+        padding:.5rem; 
+        &:hover{
+            transform:scale(1.1);
+        }
+        i{
+            font-size:64px;
+            color:white;
+            padding:.5rem .7rem .5rem .5rem;
+        }
+
+        a {
+            text-decoration: none;
+            cursor:pointer;            
+        }
+    }
+}  
+
+/*footer*/
+.footer{
+    padding:3rem 0;
+    background-color:$lighterGreen;
+
+    &__paragraph{
+        text-align: center;        
+    }
+    
+}

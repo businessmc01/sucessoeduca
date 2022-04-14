@@ -1,47 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucesso Educa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dc6a2949f4.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
-    <div class="container">
+
     <header>
-            <div class="logo-container">
-                <img src="logo-png.png" alt="sucesso educa logo">
-            </div>
-            <ul class = "navbar">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>        
+            <div class="container">
+            <nav class = "navbar">
+                <div class="navbar__logo">
+                    <img class="navbar__logo__img" src="imgs/logo-png.png" alt="sucesso educa logo">
+                    <p class="navbar__logo__name">Sucesso Educa</p>
+                </div>
+                <ul class="navbar__container">
+                    <li><a href="#home" class="navbar__links">Início</a></li>
+                    <li><a href="#courses" class="navbar__links">Cursos</a></li>
+                    <li><a href="#about" class="navbar__links">Sobre Nós</a></li>
+                    <li><a href="#contact" class="navbar__links">Contato</a></li>
+                    <div class="close-btn">
+                        X
+                    </div>
+                </ul>
+                <div class="menu_barras">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>      
+        </div> 
     </header>
-    <main>
-        <div class="hero-container">
-            <img src="banner.jpg" alt="hero">
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="hero__title">Seu Sucesso Começa Aqui</h1>
         </div>
-        <h1>Seu Sucesso Começa Aqui</h1>
 
-        <section class="grupos">
-    
+    </section>
 
-        <div class="grupos-whats-telegram">
-            <div class="whatsapp"><a href="https://bit.ly/sucessoeduca%C3%A7%C3%A3o"><i class="fab fa-whatsapp"></i></a></div>
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="courses__title">Conheça Nossos Cursos</h2>
+            <div class="courses__container">                
+                <div class="card">
+                    <img src="../hero.jpg" alt="" class="card__img">
+                    <h3 class="card__name">Empreender</h3>
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt accusantium, nihil necessitatibus laudantium temporibus mollitia quidem, ea voluptatum, dolor quas quam repellat aut praesentium!</p>
+                    <a href="" class="card__btn">Saiba Mais</a>
+                </div>
+                <div class="card">
+                    <img src="../hero.jpg" alt="" class="card__img">
+                    <h3 class="card__name">Empreender</h3>
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt accusantium, nihil necessitatibus laudantium temporibus mollitia quidem, ea voluptatum, dolor quas quam repellat aut praesentium!</p>
+                    <a href="" class="card__btn">Saiba Mais</a>
+                </div>
+                <div class="card">
+                    <img src="../hero.jpg" alt="" class="card__img">
+                    <h3 class="card__name">Empreender</h3>
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt accusantium, nihil necessitatibus laudantium temporibus mollitia quidem, ea voluptatum, dolor quas quam repellat aut praesentium!</p>
+                    <a href="" class="card__btn">Saiba Mais</a>
+                </div>
 
-            <div class="telegram"><a href="https://bit.ly/sucessoeducation"><i class="fab fa-telegram-plane" ></i></a></div>
+                <div class="card">
+                    <img src="../hero.jpg" alt="" class="card__img">
+                    <h3 class="card__name">Empreender</h3>
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt accusantium, nihil necessitatibus laudantium temporibus mollitia quidem, ea voluptatum, dolor quas quam repellat aut praesentium!</p>
+                    <a href="" class="card__btn">Saiba Mais</a>
+                </div>
+
+                <div class="card">
+                    <img src="../hero.jpg" alt="" class="card__img">
+                    <h3 class="card__name">Empreender</h3>
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt accusantium, nihil necessitatibus laudantium temporibus mollitia quidem, ea voluptatum, dolor quas quam repellat aut praesentium!</p>
+                    <a href="" class="card__btn">Saiba Mais</a>
+                </div>
+
+                <div class="card">
+                    <img src="../hero.jpg" alt="" class="card__img">
+                    <h3 class="card__name">Empreender</h3>
+                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis deserunt accusantium, nihil necessitatibus laudantium temporibus mollitia quidem, ea voluptatum, dolor quas quam repellat aut praesentium!</p>
+                    <a href="" class="card__btn">Saiba Mais</a>
+                </div>
+            </div>
         </div>
-                <h2 class="title-grupos">Participe de Nossos Grupos Exclusivos </h2>
+    </section>
 
-        </section>
+    <section class="groups" id="contact ">
 
-        
-    </main>
-    </div>
-    
+        <div class="container">
+            <h2 class="groups__title">Participe de Nossos Grupos Exclusivos </h2>            
+            <div class="groups__container">
+                <div class="groups__whatsapp"><a href="https://bit.ly/sucessoeduca%C3%A7%C3%A3o"><i class="fab fa-whatsapp"></i></a></div>
+
+                <div class="groups__telegram"><a href="https://bit.ly/sucessoeducation"><i class="fab fa-telegram-plane" ></i></a></div>
+            </div>                  
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p class="footer__paragraph">
+            Copyright &copy; 2022 por Sucesso Educa. Todos os direitos reservados.
+        </p>        
+    </footer>
+
+    <script src="app/app.js"></script>
     
 </body>
 </html>
